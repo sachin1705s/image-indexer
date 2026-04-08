@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Image Archive Search</title>
+    <link rel="stylesheet" href="/styles.css" />
+  </head>
+  <body>
+    <div class="app-shell">
+      <header class="topbar">
+        <div>
+          <h1>Image Archive Search</h1>
+          <p>Local-first search across your image archive.</p>
+        </div>
+        <div class="stats" id="stats">Loading stats...</div>
+      </header>
+
+      <section class="controls">
+        <form id="search-form" class="search-form">
+          <input
+            id="query"
+            name="query"
+            type="text"
+            placeholder="Search: warm editorial portraits with negative space"
+            autocomplete="off"
+            required
+          />
+          <select id="folder-filter" name="folder">
+            <option value="">All indexed folders</option>
+          </select>
+          <select id="content-type-filter" name="content_type">
+            <option value="">All content types</option>
+          </select>
+          <input id="date-from" name="date_from" type="date" />
+          <input id="date-to" name="date_to" type="date" />
+          <button type="submit">Search</button>
+        </form>
+
+        <div class="upload-panel" id="dropzone">
+          <input id="image-upload" type="file" accept="image/*" hidden />
+          <p><strong>Image similarity</strong></p>
+          <p>Drag an image here or <button id="upload-trigger" type="button">choose a file</button>.</p>
+        </div>
+      </section>
+
+      <main class="content">
+        <section class="results-section">
+          <div class="results-header">
+            <h2>Results</h2>
+            <div class="results-meta" id="results-meta">No search yet.</div>
+          </div>
+          <div id="results-grid" class="results-grid"></div>
+        </section>
+
+        <aside class="detail-panel" id="detail-panel">
+          <div class="detail-empty">Select a result to inspect it.</div>
+        </aside>
+      </main>
+    </div>
+
+    <template id="result-card-template">
+      <article class="result-card">
+        <img class="result-thumb" alt="" loading="lazy" />
+        <div class="result-copy">
+          <p class="result-title"></p>
+          <p class="result-meta"></p>
+          <div class="badge-row"></div>
+        </div>
+      </article>
+    </template>
+
+    <script src="/app.js"></script>
+  </body>
+</html>

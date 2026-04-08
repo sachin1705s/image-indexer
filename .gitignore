@@ -1,0 +1,11 @@
+.DS_Store
+.image-archive/
+config.yaml
+.pytest_cache/
+.venv/
+build/
+__pycache__/
+*.pyc
+node_modules/
+dist/
+*.egg-info/

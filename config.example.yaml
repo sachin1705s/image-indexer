@@ -1,0 +1,44 @@
+app_data_dir: ~/Library/Application Support/image-archive-search
+indexed_paths: []
+thumbnail_dir: ~/Library/Application Support/image-archive-search/thumbnails
+sqlite_path: ~/Library/Application Support/image-archive-search/archive.db
+faiss_index_path: ~/Library/Application Support/image-archive-search/index.faiss
+upload_dir: ~/Library/Application Support/image-archive-search/uploads
+embedding_model_name: openai/clip-vit-base-patch32
+enrichment_backend: clip
+enrichment_model: openai/clip-vit-base-patch32
+enrichment_mode: fast
+enrichment_version: clip-zero-shot-v1
+ollama_host: http://127.0.0.1:11434
+ollama_timeout_seconds: 120
+fast_image_max_size: 448
+document_image_max_size: 1024
+excluded_dir_names:
+  - .git
+  - __pycache__
+  - node_modules
+  - Photo Library.photoslibrary
+  - .photoslibrary
+  - derivatives
+  - rendered
+  - proxies
+  - thumbnails
+  - previews
+  - frames
+  - caches
+  - cache
+excluded_path_fragments:
+  - .photoslibrary/resources/derivatives
+  - .photoslibrary/resources/rendered
+  - .photoslibrary/resources/proxies
+  - /video frames/
+  - /video thumbnails/
+device: auto
+batch_size: 8
+num_workers: 4
+host: 127.0.0.1
+port: 8000
+text_search_min_score: 0.24
+low_information_max_score: 0.30
+pipeline_version: mvp-v1
+embedding_dimension: 512
