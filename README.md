@@ -26,9 +26,9 @@ No cloud upload. No external APIs. Your images stay on your machine.
 - Lets you upload an image to find visually similar images.
 - Skips unchanged files when you index the same folder again.
 
-## Quick Start
+## How To Use
 
-If you have `uvx`:
+Install/run it directly from PyPI:
 
 ```bash
 uvx --from image-archive-search image-archive-search run
@@ -55,6 +55,8 @@ When the server starts, open:
 http://127.0.0.1:8000
 ```
 
+That is the main workflow. You do not need to clone this repo to use the app.
+
 ## Folder Picker
 
 Inside the terminal picker:
@@ -69,33 +71,27 @@ d         done, start indexing
 q         cancel
 ```
 
-## Common Commands
+## Other User Commands
 
 ```bash
 # Guided setup, folder selection, indexing, and optional server start
-image-archive-search run
+uvx --from image-archive-search image-archive-search run
 
 # Index one folder directly
-image-archive-search index ~/Pictures
+uvx --from image-archive-search image-archive-search index ~/Pictures
 
 # Start the local web app for already-indexed images
-image-archive-search serve
+uvx --from image-archive-search image-archive-search serve
 
 # Show archive status
-image-archive-search status
+uvx --from image-archive-search image-archive-search status
 
 # Recheck configured folders and index only changed/missing files
-image-archive-search reindex
+uvx --from image-archive-search image-archive-search reindex
 
 # Delete local index data, thumbnails, and vectors
 # This does not delete your original images.
-image-archive-search reset
-```
-
-The older command name also works:
-
-```bash
-image-archive run
+uvx --from image-archive-search image-archive-search reset
 ```
 
 ## What Gets Stored
