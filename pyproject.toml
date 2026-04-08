@@ -24,6 +24,11 @@ dependencies = [
   "uvicorn[standard]>=0.30.0,<1.0.0",
 ]
 
+[project.urls]
+Homepage = "https://github.com/sachin1705s/image-indexer"
+Repository = "https://github.com/sachin1705s/image-indexer"
+Issues = "https://github.com/sachin1705s/image-indexer/issues"
+
 [project.optional-dependencies]
 dev = [
   "pytest>=8.3.0,<9.0.0",
