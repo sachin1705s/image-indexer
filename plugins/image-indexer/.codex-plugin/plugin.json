@@ -1,0 +1,43 @@
+{
+  "name": "image-indexer",
+  "version": "0.1.0",
+  "description": "Help users install, run, troubleshoot, and publish the local-first Image Indexer CLI.",
+  "author": {
+    "name": "Sachin",
+    "email": "",
+    "url": "https://github.com/sachin1705s"
+  },
+  "homepage": "https://github.com/sachin1705s/image-indexer",
+  "repository": "https://github.com/sachin1705s/image-indexer",
+  "license": "MIT",
+  "keywords": [
+    "image-search",
+    "local-first",
+    "cli",
+    "creative-archive"
+  ],
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Image Indexer",
+    "shortDescription": "Run and troubleshoot the local-first image search CLI.",
+    "longDescription": "A Codex plugin for helping users install, run, reset, package, and debug Image Indexer, a local-first image archive search CLI served from localhost.",
+    "developerName": "Sachin",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "Write"
+    ],
+    "websiteURL": "https://github.com/sachin1705s/image-indexer",
+    "privacyPolicyURL": "https://github.com/sachin1705s/image-indexer",
+    "termsOfServiceURL": "https://github.com/sachin1705s/image-indexer",
+    "defaultPrompt": [
+      "Help me run Image Indexer.",
+      "Debug my Image Indexer install.",
+      "Reset my local image index."
+    ],
+    "brandColor": "#0F766E",
+    "composerIcon": "./assets/icon.svg",
+    "logo": "./assets/icon.svg",
+    "screenshots": []
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "name": "image-indexer-marketplace",
+  "interface": {
+    "displayName": "Image Indexer"
+  },
+  "plugins": [
+    {
+      "name": "image-indexer",
+      "source": {
+        "source": "local",
+        "path": "./plugins/image-indexer"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}
